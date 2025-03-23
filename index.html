@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light" class="h-full">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dev Board</title>
+    <!-- cdn -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/daisyui@4.12.24/dist/full.min.css"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <script src="https://cdn.tailwindcss.com"></script>
+  </head>
+  <body class="bg-[#EBF1FF] w-full min-h-screen flex flex-col">
+    <header class="container mx-auto bg-white rounded-xl mt-6">
+      <nav class="flex justify-between">
+        <div class="flex items-center m-6">
+          <img src="assets/logo.png" alt="" class="max-w-10 pr-2" />
+          <h1 class="text-3xl">Dev<span class="font-bold">Board</span></h1>
+        </div>
+        <div class="flex items-center m-6">
+          <button class="btn rounded-full mr-6 bg-[#EBF1FF]">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 16 16"
+              fill="currentColor"
+              class="size-4 text-blue-800"
+            >
+              <path
+                fill-rule="evenodd"
+                d="M8 15A7 7 0 1 0 8 1a7 7 0 0 0 0 14Zm3.844-8.791a.75.75 0 0 0-1.188-.918l-3.7 4.79-1.649-1.833a.75.75 0 1 0-1.114 1.004l2.25 2.5a.75.75 0 0 0 1.15-.043l4.25-5.5Z"
+                clip-rule="evenodd"
+              />
+            </svg>
+
+            <span id="total_task" class="text-2xl font-bold">24</span>
+          </button>
+          <button class="xl:bg-[#EBF1FF] rounded-full">
+            <img
+              src="assets/theme-btn.png"
+              alt=""
+              srcset=""
+              class="w-8 h-8 rounded-full m-1 xl:m-2"
+            />
+          </button>
+        </div>
+      </nav>
+    </header>
+    <main class="container mx-auto mt-6">
+      <section class="grid xl:grid-cols-5 grid-cols-1 xl:gap-8">
+        <!-- left div -->
+        <div class="bg-white rounded-xl p-8 xl:col-span-4">
+          <!-- main header 3 card -->
+          <div class="grid grid-cols-1 xl:grid-cols-4 gap-6 mb-10">
+            <div class="flex items-center p-6 bg-[#EBF1FF] rounded-xl">
+              <div>
+                <button class="btn rounded-full mr-4 bg-white">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    viewBox="0 0 16 16"
+                    fill="currentColor"
+                    class="size-4 text-blue-800"
+                  >
+                    <path
+                      fill-rule="evenodd"
+                      d="M8 15A7 7 0 1 0 8 1a7 7 0 0 0 0 14Zm3.844-8.791a.75.75 0 0 0-1.188-.918l-3.7 4.79-1.649-1.833a.75.75 0 1 0-1.114 1.004l2.25 2.5a.75.75 0 0 0 1.15-.043l4.25-5.5Z"
+                      clip-rule="evenodd"
+                    />
+                  </svg>
+                </button>
+              </div>
+              <div>
+                <p class="font-medium opacity-80 text-base">Task Assigned </p>
+                <h1 id="remaining tasks" class="font-bold text-2xl">05</h1>
+              </div>
+            </div>
+            <div
+              class="flex items-center p-8 bg-gradient-to-r from-[#3C57FF] to-[#9BA8F8] col-span-1 xl:col-span-2 rounded-xl"
+              id="blog"
+            >
+              <div class="mr-6">
+                <img src="assets/board.png" alt="" srcset="" />
+              </div>
+              <div>
+                <p class="font-medium text-xl">Discover Something</p>
+                <p class="font-medium text-xl">New Today!</p>
+              </div>
+            </div>
+            <div>
+              <div class="flex items-center p-6 bg-[#F4F7FF] rounded-xl h-full">
+                <div class="mr-6">
+                  <img src="assets/calender.png" alt="" srcset="" />
+                </div>
+                <div>
+                  <p class="font-medium text-xl">Wed ,</p>
+                  <p class="font-bold text-xl">Jul 28 2025</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- main todo cards -->
+
+          <div class="grid grid-cols-1 xl:grid-cols-3 xl:grid-rows-2 gap-6">
+            <div class="bg-[#F4F7FF] p-6 space-y-3 rounded-xl">
+              <button class="btn bg-white py-2 px-4">ShopEase</button>
+              <h1 class="font-medium text-xl">Fix Mobile Button Issue</h1>
+              <p class="truncate max-w-72 max-h-20 p-4 bg-white opacity-70">
+                Debug using Chrome <br />
+                DevTools, check for overlapping elements, and ensure onClick
+                works properly
+              </p>
+              <div class="flex items-center justify-between">
+                <div>
+                  <p class="opacity-70 text-sm">Deadline</p>
+                  <h1 class="text-base font-medium">21 March 2025</h1>
+                </div>
+                <div>
+                  <button class="btn btn btn-primary" id="completed_button1">
+                    Completed
+                  </button>
+                </div>
+              </div>
+            </div>
+
+            <div class="bg-[#F4F7FF] p-6 space-y-3 rounded-xl">
+              <button class="btn bg-white py-2 px-4">ShopEase</button>
+              <h1 class="font-medium text-xl">Fix Mobile Button Issue</h1>
+              <p class="truncate max-w-72 max-h-20 p-4 bg-white opacity-70">
+                Debug using Chrome <br />
+                DevTools, check for overlapping elements, and ensure onClick
+                works properly
+              </p>
+              <div class="flex items-center justify-between">
+                <div>
+                  <p class="opacity-70 text-sm">Deadline</p>
+                  <h1 class="text-base font-medium">21 March 2025</h1>
+                </div>
+                <div>
+                  <button class="btn btn btn-primary" id="completed_button2">
+                    Completed
+                  </button>
+                </div>
+              </div>
+            </div>
+
+            <div class="bg-[#F4F7FF] p-6 space-y-3 rounded-xl">
+              <button class="btn bg-white py-2 px-4">ShopEase</button>
+              <h1 class="font-medium text-xl">Fix Mobile Button Issue</h1>
+              <p class="truncate max-w-72 max-h-20 p-4 bg-white opacity-70">
+                Debug using Chrome <br />
+                DevTools, check for overlapping elements, and ensure onClick
+                works properly
+              </p>
+              <div class="flex items-center justify-between">
+                <div>
+                  <p class="opacity-70 text-sm">Deadline</p>
+                  <h1 class="text-base font-medium">21 March 2025</h1>
+                </div>
+                <div>
+                  <button class="btn btn btn-primary" id="completed_button3">
+                    Completed
+                  </button>
+                </div>
+              </div>
+            </div>
+
+            <div class="bg-[#F4F7FF] p-6 space-y-3 rounded-xl">
+              <button class="btn bg-white py-2 px-4">ShopEase</button>
+              <h1 class="font-medium text-xl">Fix Mobile Button Issue</h1>
+              <p class="truncate max-w-72 max-h-20 p-4 bg-white opacity-70">
+                Debug using Chrome <br />
+                DevTools, check for overlapping elements, and ensure onClick
+                works properly
+              </p>
+              <div class="flex items-center justify-between">
+                <div>
+                  <p class="opacity-70 text-sm">Deadline</p>
+                  <h1 class="text-base font-medium">21 March 2025</h1>
+                </div>
+                <div>
+                  <button class="btn btn btn-primary" id="completed_button4">
+                    Completed
+                  </button>
+                </div>
+              </div>
+            </div>
+
+            <div class="bg-[#F4F7FF] p-6 space-y-3 rounded-xl">
+              <button class="btn bg-white py-2 px-4">ShopEase</button>
+              <h1 class="font-medium text-xl">Fix Mobile Button Issue</h1>
+              <p class="truncate max-w-72 max-h-20 p-4 bg-white opacity-70">
+                Debug using Chrome <br />
+                DevTools, check for overlapping elements, and ensure onClick
+                works properly
+              </p>
+              <div class="flex items-center justify-between">
+                <div>
+                  <p class="opacity-70 text-sm">Deadline</p>
+                  <h1 class="text-base font-medium">21 March 2025</h1>
+                </div>
+                <div>
+                  <button class="btn btn btn-primary" id="completed_button5">
+                    Completed
+                  </button>
+                </div>
+              </div>
+            </div>
+
+            <div class="bg-[#F4F7FF] p-6 space-y-3 rounded-xl">
+              <button class="btn bg-white py-2 px-4">ShopEase</button>
+              <h1 class="font-medium text-xl">Fix Mobile Button Issue</h1>
+              <p class="truncate max-w-72 max-h-20 p-4 bg-white opacity-70">
+                Debug using Chrome <br />
+                DevTools, check for overlapping elements, and ensure onClick
+                works properly
+              </p>
+              <div class="flex items-center justify-between">
+                <div>
+                  <p class="opacity-70 text-sm">Deadline</p>
+                  <h1 class="text-base font-medium">21 March 2025</h1>
+                </div>
+                <div>
+                  <button class="btn btn btn-primary" id="completed_button6">
+                    Completed
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- right div -->
+        <div class="bg-white rounded-xl p-8 pb-20">
+          <div class="flex items-center pl-7">
+            <div>
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke-width="1.5"
+                stroke="currentColor"
+                class="size-6 mr-2"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  d="M12 6v6h4.5m4.5 0a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z"
+                />
+              </svg>
+            </div>
+            <p class="font-medium text-xl">Activity Log</p>
+          </div>
+
+          <button
+            class="btn btn-primary text-white mx-auto ml-12 mt-6 px-4 py-4"
+            id="clear"
+          >
+            Clear History
+          </button>
+        </div>
+      </section>
+    </main>
+
+   
+
+
+
+
+
+
+
+    
+  </body>
+</html>
