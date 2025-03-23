@@ -12,14 +12,10 @@
     />
     <script src="https://cdn.tailwindcss.com"></script>
 
-
-<!-- style -->
- <link rel="stylesheet" href="style.css">
-
-
-
+    <!-- style -->
+    <link rel="stylesheet" href="style.css" />
   </head>
-  <body class="bg-[#EBF1FF] w-full min-h-screen flex flex-col">
+  <body class="bg-[#EBF1FF] w-full min-h-screen flex flex-col" id="body">
     <header class="container mx-auto bg-white rounded-xl mt-6">
       <nav class="flex justify-between">
         <div class="flex items-center m-6">
@@ -27,12 +23,12 @@
           <h1 class="text-3xl">Dev<span class="font-bold">Board</span></h1>
         </div>
         <div class="flex items-center m-6">
-          <button class="btn rounded-full mr-6 bg-[#EBF1FF]">
+          <button class="btn rounded-full xl:mr-6 mr-2 bg-[#EBF1FF]">
             <svg
               xmlns="http://www.w3.org/2000/svg"
               viewBox="0 0 16 16"
               fill="currentColor"
-              class="size-4 text-blue-800"
+              class="size-8 text-blue-800"
             >
               <path
                 fill-rule="evenodd"
@@ -43,12 +39,12 @@
 
             <span id="total_task" class="text-2xl font-bold">24</span>
           </button>
-          <button class="xl:bg-[#EBF1FF] rounded-full">
+          <button class="xl:bg-[#EBF1FF] rounded-full" id="dynamic">
             <img
               src="assets/theme-btn.png"
               alt=""
               srcset=""
-              class="w-8 h-8 rounded-full m-1 xl:m-2"
+              class="w-8 h-8  rounded-full xl:m-2"
             />
           </button>
         </div>
@@ -67,7 +63,7 @@
                     xmlns="http://www.w3.org/2000/svg"
                     viewBox="0 0 16 16"
                     fill="currentColor"
-                    class="size-4 text-blue-800"
+                    class="size-8 text-blue-800"
                   >
                     <path
                       fill-rule="evenodd"
@@ -79,11 +75,11 @@
               </div>
               <div>
                 <p class="font-medium opacity-80 text-base">Task Assigned </p>
-                <h1 id="remaining tasks" class="font-bold text-2xl">05</h1>
+                <h1 id="remaining_tasks" class="font-bold text-2xl">6</h1>
               </div>
             </div>
             <div
-              class="flex items-center p-8 bg-gradient-to-r from-[#3C57FF] to-[#9BA8F8] col-span-1 xl:col-span-2 rounded-xl"
+              class="cursor-pointer flex items-center p-8 bg-gradient-to-r from-[#3C57FF] to-[#9BA8F8] col-span-1 xl:col-span-2 rounded-xl"
               id="blog"
             >
               <div class="mr-6">
@@ -112,7 +108,7 @@
           <div class="grid grid-cols-1 xl:grid-cols-3 xl:grid-rows-2 gap-6">
             <div class="bg-[#F4F7FF] p-6 space-y-3 rounded-xl">
               <button class="btn bg-white py-2 px-4">ShopEase</button>
-              <h1 class="font-medium text-xl">Fix Mobile Button Issue</h1>
+              <h1 class="font-medium text-xl" id="button1_title">Fix Mobile Button Issue</h1>
               <p class="truncate max-w-72 max-h-20 p-4 bg-white opacity-70">
                 Debug using Chrome <br />
                 DevTools, check for overlapping elements, and ensure onClick
@@ -124,7 +120,10 @@
                   <h1 class="text-base font-medium">21 March 2025</h1>
                 </div>
                 <div>
-                  <button class="btn btn btn-primary text-white" id="completed_button1">
+                  <button
+                    class="btn btn btn-primary text-white"
+                    id="completed_button1"
+                  >
                     Completed
                   </button>
                 </div>
@@ -132,12 +131,12 @@
             </div>
 
             <div class="bg-[#F4F7FF] p-6 space-y-3 rounded-xl">
-              <button class="btn bg-white py-2 px-4">ShopEase</button>
-              <h1 class="font-medium text-xl">Fix Mobile Button Issue</h1>
+              <button class="btn bg-white py-2 px-4">CloudSync</button>
+              <h1 class="font-medium text-xl"  id="button2_title">Add Dark Mode</h1>
               <p class="truncate max-w-72 max-h-20 p-4 bg-white opacity-70">
-                Debug using Chrome <br />
-                DevTools, check for overlapping elements, and ensure onClick
-                works properly
+                Store the user's preference in <br />
+                localStorage, update CSS variables dynamically, and apply a
+                smooth transition effect.
               </p>
               <div class="flex items-center justify-between">
                 <div>
@@ -145,7 +144,10 @@
                   <h1 class="text-base font-medium">21 March 2025</h1>
                 </div>
                 <div>
-                  <button class="btn btn btn-primary text-white" id="completed_button2">
+                  <button
+                    class="btn btn btn-primary text-white"
+                    id="completed_button2"
+                  >
                     Completed
                   </button>
                 </div>
@@ -153,12 +155,12 @@
             </div>
 
             <div class="bg-[#F4F7FF] p-6 space-y-3 rounded-xl">
-              <button class="btn bg-white py-2 px-4">ShopEase</button>
-              <h1 class="font-medium text-xl">Fix Mobile Button Issue</h1>
+              <button class="btn bg-white py-2 px-4">SwiftPay</button>
+              <h1 class="font-medium text-xl"  id="button3_title">Optimize Home page </h1>
               <p class="truncate max-w-72 max-h-20 p-4 bg-white opacity-70">
                 Debug using Chrome <br />
                 DevTools, check for overlapping elements, and ensure onClick
-                works properly
+                works properly and ensure onClick works properly
               </p>
               <div class="flex items-center justify-between">
                 <div>
@@ -166,7 +168,10 @@
                   <h1 class="text-base font-medium">21 March 2025</h1>
                 </div>
                 <div>
-                  <button class="btn btn btn-primary text-white" id="completed_button3">
+                  <button
+                    class="btn btn btn-primary text-white"
+                    id="completed_button3"
+                  >
                     Completed
                   </button>
                 </div>
@@ -174,8 +179,8 @@
             </div>
 
             <div class="bg-[#F4F7FF] p-6 space-y-3 rounded-xl">
-              <button class="btn bg-white py-2 px-4">ShopEase</button>
-              <h1 class="font-medium text-xl">Fix Mobile Button Issue</h1>
+              <button class="btn bg-white py-2 px-4">Meta</button>
+              <h1 class="font-medium text-xl"  id="button4_title">Add new emoji 🤲</h1>
               <p class="truncate max-w-72 max-h-20 p-4 bg-white opacity-70">
                 Debug using Chrome <br />
                 DevTools, check for overlapping elements, and ensure onClick
@@ -187,7 +192,10 @@
                   <h1 class="text-base font-medium">21 March 2025</h1>
                 </div>
                 <div>
-                  <button class="btn btn btn-primary text-white" id="completed_button4">
+                  <button
+                    class="btn btn btn-primary text-white"
+                    id="completed_button4"
+                  >
                     Completed
                   </button>
                 </div>
@@ -195,8 +203,8 @@
             </div>
 
             <div class="bg-[#F4F7FF] p-6 space-y-3 rounded-xl">
-              <button class="btn bg-white py-2 px-4">ShopEase</button>
-              <h1 class="font-medium text-xl">Fix Mobile Button Issue</h1>
+              <button class="btn bg-white py-2 px-4">Google LLC</button>
+              <h1 class="font-medium text-xl"  id="button5_title">Integrate OpenAI API</h1>
               <p class="truncate max-w-72 max-h-20 p-4 bg-white opacity-70">
                 Debug using Chrome <br />
                 DevTools, check for overlapping elements, and ensure onClick
@@ -208,7 +216,10 @@
                   <h1 class="text-base font-medium">21 March 2025</h1>
                 </div>
                 <div>
-                  <button class="btn btn btn-primary text-white" id="completed_button5">
+                  <button
+                    class="btn btn btn-primary text-white"
+                    id="completed_button5"
+                  >
                     Completed
                   </button>
                 </div>
@@ -216,8 +227,8 @@
             </div>
 
             <div class="bg-[#F4F7FF] p-6 space-y-3 rounded-xl">
-              <button class="btn bg-white py-2 px-4">ShopEase</button>
-              <h1 class="font-medium text-xl">Fix Mobile Button Issue</h1>
+              <button class="btn bg-white py-2 px-4">Glassdoar</button>
+              <h1 class="font-medium text-xl"  id="button6_title">Improve Job searching</h1>
               <p class="truncate max-w-72 max-h-20 p-4 bg-white opacity-70">
                 Debug using Chrome <br />
                 DevTools, check for overlapping elements, and ensure onClick
@@ -229,7 +240,10 @@
                   <h1 class="text-base font-medium">21 March 2025</h1>
                 </div>
                 <div>
-                  <button class="btn btn btn-primary text-white" id="completed_button6">
+                  <button
+                    class="btn btn btn-primary text-white"
+                    id="completed_button6"
+                  >
                     Completed
                   </button>
                 </div>
@@ -265,14 +279,17 @@
           >
             Clear History
           </button>
+
+          <div id="history" class="mt-4">
+            
+          </div>
         </div>
       </section>
     </main>
 
-   
 
-
-
+<script src="./scripts/button.js"></script>
+<script src="./scripts/function.js"></script>
 
 
 

@@ -1,5 +1,8 @@
 .bg{
     background-color: #F4F7FF;
     color: black;
-    font-size: 4rem;
+    font-size: 1rem;
+    padding: 10px;
+    margin-bottom: 10px;
+    border-radius: 10px;
 }
