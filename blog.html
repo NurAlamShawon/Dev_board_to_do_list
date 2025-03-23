@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog</title>
+
+
+    <!-- cdn -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/daisyui@4.12.24/dist/full.min.css"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <script src="https://cdn.tailwindcss.com"></script>
+
+  
+
+</head>
+<body class="bg-[#EBF1FF] w-full min-h-screen flex flex-col">
+    <header class="container mx-auto bg-white rounded-xl mt-6">
+        <nav class="flex justify-between items-center p-4" >
+            <div class="flex items-center m-6">
+              <img src="assets/logo.png" alt="" class="max-w-10 pr-2" />
+              <h1 class="text-3xl">Dev<span class="font-bold">Board</span></h1>
+            </div>
+            <div>
+                <button class="btn btn-primary">Back to Desk</button>
+              
+            </div>
+          </nav>
+    </header>
+    <main class="container mx-auto mt-10">
+
+
+        <div class="grid grid-cols-1 gap-5">
+            <div class="bg-white p-8">
+                <h1 class="mb-2">Question-1: What are the different ways to select an element in the DOM?</h1>
+                <hr>
+                <p class="mt-2">
+                    <ul class="list-disc">
+                        <li>document.getElementById("id")</li>
+                        <li>document.getElementsByClassName("class")</li>
+                        <li>document.getElementsByTagName("tag")</li>
+                        <li>document.querySelector("selector")</li>
+                        <li>document.querySelectorAll("selector")</li>
+                    </ul>
+                </p>
+            </div>
+            <div class="bg-white p-8">
+                <h1 class="mb-2">Question-2: What is the difference between innerHTML, innerText, and textContent ?</h1>
+                <hr>
+                <p class="mt-2"></p>
+            </div>
+            <div class="bg-white p-8">
+                <h1 class="mb-2">Question-3: What is event delegation in the DOM?</h1>
+                <hr>
+                <p class="mt-2"></p>
+            </div>
+            <div class="bg-white p-8">
+                <h1 class="mb-2" >Question-4: What is event bubbling in the DOM?</h1>
+                <hr>
+                <p class="mt-2"></p>
+            </div>
+            <div class="bg-white p-8">
+                <h1 class="mb-2">Question-5: How do you create, add, and remove elements using JavaScript?</h1>
+                <hr>
+                <p class="mt-2"></p>
+            </div>
+        </div>
+
+    </main>
+    
+</body>
+</html>
